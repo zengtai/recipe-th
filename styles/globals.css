@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.article p {
+  @apply my-3;
+}
+
+.article h3 a {
+  @apply hover:text-orange-600;
+}
+
+.navItem-title {
+  @apply my-2;
+}
+
+.read-more {
+  @apply rounded-full bg-orange-600 p-4 text-white/80 xl:hover:text-white;
+}
+
+.article-content h3 {
+  @apply my-6;
+}
+.article-content h3 strong {
+  @apply text-xl font-medium;
+}
+
+.article-content a {
+  @apply underline underline-offset-1;
+}
+
+@media (min-width: 300px) {
+  .AdContainer {
+    width: 300px;
+  }
+  .banner {
+    height: 100px;
+  }
+  .banner_sm {
+    height: 50px;
+  }
+  .rectangle {
+    height: 200px;
+  }
+}
+@media (min-width: 468px) {
+  .AdContainer {
+    width: 468px;
+    height: 60px;
+  }
+}
+@media (min-width: 728px) {
+  .AdContainer {
+    width: 728px;
+    height: 90px;
+  }
+}
+@media (min-width: 970px) {
+  .banner_lg {
+    width: 970px;
+    height: 250px;
+  }
+  .square {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.adsbygoogle {
+  @apply w-full;
+}
