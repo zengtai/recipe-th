@@ -10,11 +10,11 @@ import Head from "next/head";
 export default function Home({ data, global }) {
   let recipes = data.recipes;
 
-  let tmp = [];
-  recipes.map((i) => tmp.push(`${i.title} - ${i.id}`));
-  console.log(tmp.join(`,`));
+  // let tmp = [];
+  // recipes.map((i) => tmp.push(`${i.title} - ${i.id}`));
+  // console.log(tmp.join(`,`));
 
-  console.log(`recipes total`, recipes.length);
+  // console.log(`recipes total`, recipes.length);
 
   return (
     <>
@@ -25,10 +25,11 @@ export default function Home({ data, global }) {
         {/* <div className="p-20">{images.join(`\n`)}</div> */}
         <div className="container mx-auto">
           <Banner
-            className={`banner rectangle mt-4`}
+            className={`mt-4`}
             style={{ display: "block" }}
             slot={ADS_SLOT_ID.home}
-            responsive="false"
+            responsive="true"
+            auto
           />
           <header className="m-4 text-center">
             <h6 className="text-sm font-medium text-orange-600">

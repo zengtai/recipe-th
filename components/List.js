@@ -56,7 +56,7 @@ export default function List({ items, SLOT_ID }) {
           </div>
         </article>
         {index == 0 || index == 2 ? (
-          <Banner slot={SLOT_ID} responsive="true" auto />
+          <Banner className={`mt-4`} slot={SLOT_ID} responsive="true" auto />
         ) : null}
       </>
     );
