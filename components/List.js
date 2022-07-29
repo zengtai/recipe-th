@@ -1,11 +1,11 @@
 import Image from "./Image";
 import Link from "next/link";
 import { ADS_SLOT_ID, IMAGE_BASE } from "../lib/constants";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import Banner from "./Banner";
 
 export default function List({ items, SLOT_ID }) {
-  const router = useRouter();
+  // const router = useRouter();
   return items.map((item, index) => {
     return (
       <>
@@ -20,7 +20,8 @@ export default function List({ items, SLOT_ID }) {
                 title={item.title}
               >
                 <Image
-                  src={`${router.basePath}${IMAGE_BASE}${item.recipe_image_url}`}
+                  // src={`${router.basePath}${IMAGE_BASE}${item.recipe_image_url}`}
+                  src={`${IMAGE_BASE}${item.recipe_image_url}`}
                   alt={item.title}
                   width={400}
                   height={400}
