@@ -25,10 +25,10 @@ export default function Home({ data, global }) {
         {/* <div className="p-20">{images.join(`\n`)}</div> */}
         <div className="container mx-auto">
           <Banner
-            className={`mt-4 grid place-items-center`}
+            className={`banner`}
+            style={{ display: "block" }}
             slot={ADS_SLOT_ID.home}
             responsive="false"
-            auto
           />
           <header className="m-4 text-center">
             <h6 className="text-sm font-medium text-orange-600">

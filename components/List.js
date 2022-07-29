@@ -57,10 +57,10 @@ export default function List({ items, SLOT_ID }) {
         </article>
         {index == 0 || index == 2 ? (
           <Banner
-            className={`mt-4 grid place-items-center`}
+            className={`banner rectangle`}
+            style={{ display: "block" }}
             slot={SLOT_ID}
             responsive="false"
-            auto
           />
         ) : null}
       </>
