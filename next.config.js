@@ -26,6 +26,7 @@ const nextConfig = {
     return "20220729"; //
   },
   // basePath: "/webs/recipe/public/th",
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
