@@ -37,7 +37,11 @@ export default function Category({ data, global }) {
             {data.currentCategory}
           </h1>
           <div className="grid gap-4 xl:my-8 xl:grid-cols-4 xl:gap-6">
-            <List items={recipes} categories={global.categories} />
+            <List
+              items={recipes}
+              categories={global.categories}
+              SLOT_ID={ADS_SLOT_ID.category}
+            />
           </div>
         </div>
       </Layout>

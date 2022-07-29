@@ -45,7 +45,7 @@ export default function Recipe({ data, global }) {
               <Link
                 href={`/category/${
                   global.categories.find((item) => item.name == recipe.category)
-                    .slug
+                    .id
                 }`}
               >
                 <a>{recipe.category}</a>
@@ -54,16 +54,6 @@ export default function Recipe({ data, global }) {
           </div>
           <article className="article">
             <div className="mx-4 border xl:flex xl:flex-row-reverse xl:gap-10">
-              {/* <div className="relative h-auto w-auto bg-black/5 xl:m-4 xl:h-[400px] xl:w-[400px]">
-                <Image
-                  src={`${IMAGE_BASE}${recipe.recipe_image_url}`}
-                  alt={recipe.title}
-                  width={400}
-                  height={400}
-                  layout={`responsive`}
-                />
-              </div> */}
-
               <div className="recipe-info m-4 grow">
                 <h1 className="my-4 font-serif text-3xl font-bold text-slate-700 xl:m-4 xl:mx-0 xl:mb-8 xl:text-6xl xl:font-medium">
                   <div dangerouslySetInnerHTML={{ __html: recipe.title }} />

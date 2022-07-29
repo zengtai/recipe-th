@@ -29,6 +29,10 @@
   @apply underline underline-offset-1;
 }
 
+.banner {
+  @apply w-full bg-black/5;
+}
+
 @media (min-width: 300px) {
   .AdContainer {
     width: 300px;
