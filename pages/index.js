@@ -10,6 +10,10 @@ import Head from "next/head";
 export default function Home({ data, global }) {
   let recipes = data.recipes;
 
+  let tmp = [];
+  recipes.map((i) => tmp.push(`${i.title} - ${i.id}`));
+  console.log(tmp.join(`,`));
+
   console.log(`recipes total`, recipes.length);
 
   return (
@@ -55,7 +59,7 @@ export const getStaticProps = async (ctx) => {
   // const posts = await getLocalData(`posts`).then((res) => res.slice(0, 10));
 
   const recipesOriginal = await getLocalData(`recipes`).then((res) =>
-    res.slice(0, 20)
+    res.slice()
   );
   recipesOriginal.map((recipe) => {
     let tmp = {

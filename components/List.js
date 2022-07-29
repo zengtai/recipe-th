@@ -1,13 +1,15 @@
 import Image from "./Image";
 import Link from "next/link";
 import { IMAGE_BASE } from "../lib/constants";
+import { useRouter } from "next/router";
 
-export default function List({ items, categories }) {
+export default function List({ items }) {
+  const router = useRouter();
   return items.map((item) => {
     return (
       <article
         className="article mx-4 flex flex-col justify-between border bg-white p-4 shadow-lg"
-        key={item.title}
+        key={item.id}
       >
         <div>
           <Link href={`/recipe/${item.id}`}>
@@ -16,7 +18,7 @@ export default function List({ items, categories }) {
               title={item.title}
             >
               <Image
-                src={`${IMAGE_BASE}${item.recipe_image_url}`}
+                src={`${router.basePath}${IMAGE_BASE}${item.recipe_image_url}`}
                 alt={item.title}
                 width={400}
                 height={400}

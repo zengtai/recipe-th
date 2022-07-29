@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { getLocalData, removeLink } from "../../lib/api";
 
+import { useRouter } from "next/router";
+
 import Banner from "../../components/Banner";
 
 import { ADS_SLOT_ID, IMAGE_BASE } from "../../lib/constants";
@@ -17,6 +19,10 @@ export default function Recipe({ data, global }) {
   let recipe = data.recipe;
 
   let noLink = true;
+
+  const basePath = useRouter().basePath;
+
+  let content = recipe.content.replace(/(\/uploads\/)/g, `${basePath}$1`);
 
   return (
     <>
@@ -66,14 +72,12 @@ export default function Recipe({ data, global }) {
             </div>
             <div className="xl:flex">
               <div className="">
-                {recipe.content.length !== 0 && (
+                {content.length !== 0 && (
                   <>
                     <div className="m-4 border bg-slate-100 p-4">
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: noLink
-                            ? removeLink(recipe.content)
-                            : recipe.content,
+                          __html: noLink ? removeLink(content) : content,
                         }}
                       />
                     </div>
