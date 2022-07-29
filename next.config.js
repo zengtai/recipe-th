@@ -23,7 +23,7 @@ const nextConfig = {
   },
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
-    return "20220728"; //
+    return "20220729"; //
   },
   // basePath: "/webs/recipe/public/id",
 };
