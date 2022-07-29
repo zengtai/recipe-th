@@ -16,7 +16,7 @@ export default function Recipe({ data, global }) {
 
   let recipe = data.recipe;
 
-  let noLink = false;
+  let noLink = true;
 
   return (
     <>

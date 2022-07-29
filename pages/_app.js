@@ -41,7 +41,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <meta name="google" content="notranslate" />
+        {/* <meta name="google" content="notranslate" /> */}
         <link
           rel="icon"
           href={`${Router.basePath}/favicon.ico`}
