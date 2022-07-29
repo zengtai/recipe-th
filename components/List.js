@@ -57,7 +57,7 @@ export default function List({ items, SLOT_ID }) {
         </article>
         {index == 0 || index == 2 ? (
           <Banner
-            className={`mt-4 place-items-center`}
+            className={`mt-4 grid place-items-center`}
             slot={SLOT_ID}
             responsive="true"
             auto

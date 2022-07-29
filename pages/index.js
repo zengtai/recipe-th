@@ -25,7 +25,7 @@ export default function Home({ data, global }) {
         {/* <div className="p-20">{images.join(`\n`)}</div> */}
         <div className="container mx-auto">
           <Banner
-            className={`mt-4 place-items-center`}
+            className={`mt-4 grid place-items-center`}
             slot={ADS_SLOT_ID.home}
             responsive="true"
             auto
