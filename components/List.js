@@ -57,7 +57,7 @@ export default function List({ items, SLOT_ID }) {
         </article>
         {index == 0 || index == 2 ? (
           <Banner
-            className={`banner rectangle mt-4`}
+            className={`rectangle mt-4`}
             style={{ display: "block" }}
             slot={SLOT_ID}
             responsive="false"
