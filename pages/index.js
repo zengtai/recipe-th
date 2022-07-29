@@ -27,7 +27,7 @@ export default function Home({ data, global }) {
           <Banner
             className={`mt-4 grid place-items-center`}
             slot={ADS_SLOT_ID.home}
-            responsive="true"
+            responsive="false"
             auto
           />
           <header className="m-4 text-center">

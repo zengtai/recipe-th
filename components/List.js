@@ -59,7 +59,7 @@ export default function List({ items, SLOT_ID }) {
           <Banner
             className={`mt-4 grid place-items-center`}
             slot={SLOT_ID}
-            responsive="true"
+            responsive="false"
             auto
           />
         ) : null}
