@@ -56,12 +56,7 @@ export default function List({ items, SLOT_ID }) {
           </div>
         </article>
         {index == 0 || index == 2 ? (
-          <Banner
-            className={`rectangle mt-4`}
-            style={{ display: "block" }}
-            slot={SLOT_ID}
-            responsive="false"
-          />
+          <Banner slot={SLOT_ID} responsive="true" auto />
         ) : null}
       </>
     );
