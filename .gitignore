@@ -10,7 +10,7 @@
 
 # local images
 
-/public/uploads/
+/public/uploads
 
 # next.js
 /.next/
