@@ -20,9 +20,9 @@ export default function Recipe({ data, global }) {
 
   let noLink = true;
 
-  const basePath = useRouter().basePath;
+  // const basePath = useRouter().basePath;
 
-  let content = recipe.content.replace(/(\/uploads\/)/g, `${basePath}$1`);
+  let content = recipe.content.replace(/(\/uploads\/)/g, `${IMAGE_BASE}$1`);
 
   return (
     <>
