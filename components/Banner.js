@@ -12,21 +12,21 @@ const Banner = ({
   layoutKey,
   auto,
 }) => {
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     let adsLength = document.querySelectorAll(".adsbygoogle:only-child").length;
-  //       for (let i = 0; i < adsLength; i++ ) {
-  //         try {
-  //           (window.adsbygoogle || []).push({});
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      let adsLength = document.querySelectorAll(".adsbygoogle:only-child").length;
+        for (let i = 0; i < adsLength; i++ ) {
+          try {
+            (window.adsbygoogle || []).push({});
             
-  //         } catch (e) {
-  //           console.error(`Adsense Error: `, e.messenge);
-  //       }
-  //     }
-  //     // alert(`OK`);
-  //   }
+          } catch (e) {
+            console.error(`Adsense Error: `, e.stack);
+        }
+      }
+      // alert(`OK`);
+    }
     
-  // }, []);
+  }, []);
 
   return auto ? ( 
     <div className={`${className} custom-ad`}>
@@ -39,10 +39,11 @@ const Banner = ({
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
+        data-adtest="on"
       />
-      <script dangerouslySetInnerHTML={{__html:`
+      {/* <script dangerouslySetInnerHTML={{__html:`
           (adsbygoogle = window.adsbygoogle || []).push({});    
-      `}} />
+      `}} /> */}
     </div>
   ) : (
     <div className={`${className} custom-ad`}>
@@ -55,10 +56,11 @@ const Banner = ({
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
+        data-adtest="on"
       />
-      <script dangerouslySetInnerHTML={{__html:`
+      {/* <script dangerouslySetInnerHTML={{__html:`
           (adsbygoogle = window.adsbygoogle || []).push({});    
-      `}} />
+      `}} /> */}
     
     </div>
   );

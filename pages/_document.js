@@ -11,8 +11,14 @@ class MyDocument extends Document {
     return (
       <Html lang="th">
         <Head>
-          
-        </Head>
+        <script
+        id="adsense-init"
+        onError={ (e) => { console.error('Script failed to load', e) }}
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+        crossOrigin="anonymous"
+      />
+      </Head>
         <body>
           <Main />
           <NextScript />
