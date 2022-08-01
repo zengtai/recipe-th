@@ -1,12 +1,12 @@
+import Link from "next/link";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
-import Link from "next/link";
 import { getLocalData } from "../../lib/api";
 
 import Head from "next/head";
 
-import { ADS_SLOT_ID } from "../../lib/constants";
 import Banner from "../../components/Banner";
+import { ADS_SLOT_ID } from "../../lib/constants";
 
 export default function Category({ data, global }) {
   // console.log(`data`, data);

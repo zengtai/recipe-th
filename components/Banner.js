@@ -10,7 +10,6 @@ const Banner = ({
   slot,
   responsive,
   layoutKey,
-  auto,
 }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -26,6 +25,7 @@ const Banner = ({
       // }
       try {
         (window.adsbygoogle || []).push({});
+        console.log(`Ad is pushed`);
       } catch (e) {
         console.error(`Adsense Error: `, e);
       }
@@ -54,41 +54,6 @@ const Banner = ({
       />
     </div>
   );
-  // return auto ? (
-  //   <div className={`${className} custom-ad`}>
-  //     <ins
-  //       className="adsbygoogle"
-  //       style={style}
-  //       data-ad-layout={layout}
-  //       data-ad-format={format}
-  //       data-ad-client={client}
-  //       data-ad-slot={slot}
-  //       data-ad-layout-key={layoutKey}
-  //       data-full-width-responsive={responsive}
-  //       data-adtest="on"
-  //     />
-  //     {/* <script dangerouslySetInnerHTML={{__html:`
-  //         (adsbygoogle = window.adsbygoogle || []).push({});
-  //     `}} /> */}
-  //   </div>
-  // ) : (
-  //   <div className={`${className} custom-ad`}>
-  //     <ins
-  //       className={`adsbygoogle`}
-  //       style={style}
-  //       data-ad-layout={layout}
-  //       data-ad-format={format}
-  //       data-ad-client={client}
-  //       data-ad-slot={slot}
-  //       data-ad-layout-key={layoutKey}
-  //       data-full-width-responsive={responsive}
-  //       data-adtest="on"
-  //     />
-  //     {/* <script dangerouslySetInnerHTML={{__html:`
-  //         (adsbygoogle = window.adsbygoogle || []).push({});
-  //     `}} /> */}
-  //   </div>
-  // );
 };
 
 export default Banner;

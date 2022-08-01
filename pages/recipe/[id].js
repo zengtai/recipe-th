@@ -1,14 +1,11 @@
-import Layout from "../../components/Layout";
-import Image from "next/image";
 import Link from "next/link";
+import Layout from "../../components/Layout";
 import { getLocalData, removeLink } from "../../lib/api";
-
-import { useRouter } from "next/router";
 
 import Banner from "../../components/Banner";
 
-import { ADS_SLOT_ID, IMAGE_BASE } from "../../lib/constants";
 import Head from "next/head";
+import { ADS_SLOT_ID, IMAGE_BASE } from "../../lib/constants";
 
 export default function Recipe({ data, global }) {
   // console.log(`recipe`, data.recipe);

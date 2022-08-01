@@ -1,7 +1,7 @@
-import Image from "./Image";
 import Link from "next/link";
 import { IMAGE_BASE } from "../lib/constants";
 import Banner from "./Banner";
+import Image from "./Image";
 
 export default function ListItem({ item, SLOT_ID }) {
   return (

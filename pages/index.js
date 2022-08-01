@@ -1,19 +1,13 @@
-import { getLocalData } from "../lib/api";
-import { ADS_SLOT_ID } from "../lib/constants";
 import Banner from "../components/Banner";
 import List from "../components/List";
+import { getLocalData } from "../lib/api";
+import { ADS_SLOT_ID } from "../lib/constants";
 
-import Layout from "../components/Layout";
 import Head from "next/head";
+import Layout from "../components/Layout";
 
 export default function Home({ data, global }) {
   let recipes = data.recipes;
-
-  // let tmp = [];
-  // recipes.map((i) => tmp.push(`${i.title} - ${i.id}`));
-  // console.log(tmp.join(`,`));
-
-  // console.log(`recipes total`, recipes.length);
 
   return (
     <>
@@ -21,7 +15,6 @@ export default function Home({ data, global }) {
         <title>Recipe Guru</title>
       </Head>
       <Layout items={global.categories}>
-        {/* <div className="p-20">{images.join(`\n`)}</div> */}
         <div className="container mx-auto">
           <Banner
             className={``}
@@ -51,7 +44,7 @@ export default function Home({ data, global }) {
   );
 }
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps = async () => {
   // const categories = await getLocalData(`categories`);
 
   let recipes = [];
@@ -74,9 +67,6 @@ export const getStaticProps = async (ctx) => {
   return {
     props: {
       data: {
-        // categories,
-        // posts: posts ? posts : `Nothing`,
-
         recipes,
       },
     },

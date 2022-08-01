@@ -2,8 +2,8 @@ import App from "next/app";
 
 import Head from "next/head";
 
-import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 import { getLocalData } from "../lib/api";
 import { GA_ID } from "../lib/constants";
@@ -13,8 +13,8 @@ import Script from "next/script";
 import * as gtag from "../lib/gtag";
 
 import NProgress from "nprogress";
-import "../styles/globals.css";
 import "../public/nprogress.css";
+import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }) => {
   const Router = useRouter();
