@@ -1,5 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { useEffect } from "react";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ADS_ID } from "../lib/constants";
 
 class MyDocument extends Document {

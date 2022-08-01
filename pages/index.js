@@ -67,7 +67,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       data: {
-        recipes,
+        recipes.slice(0,20),
       },
     },
   };
