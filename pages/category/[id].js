@@ -20,10 +20,11 @@ export default function Category({ data, global }) {
       <Layout items={global.categories}>
         <div className="container mx-auto">
           <Banner
-            className={`banner rectangle mt-4`}
+            className={``}
             style={{ display: "block" }}
             slot={ADS_SLOT_ID.category}
-            responsive="false"
+            responsive="true"
+            format={[`rectangle`, `horizontal`]}
           />
           <div className="breadcrumb m-4 flex gap-6 whitespace-nowrap text-xs xl:text-sm">
             <div className="breadcrumb-link relative after:absolute after:-right-4 after:opacity-50 after:content-['/']">
