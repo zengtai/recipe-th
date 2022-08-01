@@ -13,14 +13,16 @@ const Banner = ({
   auto,
 }) => {
   useEffect(() => {
-    let adsLength = document.querySelectorAll(".adsbygoogle:only-child").length;
-    for (let i = 0; i < adsLength; i++ ) {
-      try {
-        (window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error(`Adsense Error: `, e.messenge);
+    if (typeof window !== 'undefined') {
+      let adsLength = document.querySelectorAll(".adsbygoogle:only-child").length;
+        for (let i = 0; i < adsLength; i++ ) {
+          try {
+            (window.adsbygoogle || []).push({});
+          } catch (e) {
+            console.error(`Adsense Error: `, e.messenge);
+        }
+      }
     }
-  }
   }, []);
 
   return auto ? ( 

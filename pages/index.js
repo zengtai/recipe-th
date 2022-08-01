@@ -1,8 +1,7 @@
 import { getLocalData } from "../lib/api";
+import { ADS_SLOT_ID } from "../lib/constants";
 import Banner from "../components/Banner";
 import List from "../components/List";
-
-import { ADS_SLOT_ID } from "../lib/constants";
 
 import Layout from "../components/Layout";
 import Head from "next/head";
