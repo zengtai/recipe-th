@@ -24,9 +24,10 @@ const Banner = ({
       //   }
       // }
       try {
-        console.log(`Try push`, window.adsbygoogle);
-        setTimeout(() => (window.adsbygoogle || []).push({}), 1000);
-        console.log(`Ad is pushed`);
+        setTimeout(
+          () => (adsbygoogle = window.adsbygoogle || []).push({}),
+          1000
+        );
       } catch (e) {
         console.error(`Adsense Error: `, e);
       }
@@ -44,7 +45,6 @@ const Banner = ({
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
-        data-adtest="on"
       />
       {/* <script
         dangerouslySetInnerHTML={{
