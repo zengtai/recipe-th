@@ -14,17 +14,16 @@ const Banner = ({
 }) => {
   useEffect(() => {
     try {
-      const adsbygoogle = window.adsbygoogle || [];
-      adsbygoogle.push({});
+      (window.adsbygoogle || []).push({});
     } catch (e) {
-      console.error(e);
+      console.error(`Adsense Error: `, e.messenge);
     }
   }, []);
 
   return auto ? ( 
     <div className={`${className} custom-ad`}>
       <ins
-        className={`adsbygoogle`}
+        className="adsbygoogle"
         style={style}
         data-ad-layout={layout}
         data-ad-format={format}
