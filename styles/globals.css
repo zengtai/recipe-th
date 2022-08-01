@@ -71,7 +71,7 @@
 }
 
 .adsbygoogle {
-  @apply w-full;
+  @apply w-full flex justify-center;
 }
 
 .custom-ad {
