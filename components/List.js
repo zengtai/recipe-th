@@ -1,6 +1,6 @@
 import Image from "./Image";
 import Link from "next/link";
-import { ADS_SLOT_ID, IMAGE_BASE } from "../lib/constants";
+import { IMAGE_BASE } from "../lib/constants";
 // import { useRouter } from "next/router";
 import Banner from "./Banner";
 
@@ -8,11 +8,8 @@ export default function List({ items, SLOT_ID }) {
   // const router = useRouter();
   return items.map((item, index) => {
     return (
-      <>
-        <article
-          className="article mx-4 flex flex-col justify-between border bg-white p-4 shadow-lg"
-          key={item.id}
-        >
+      <div key={item.id}>
+        <article className="article mx-4 flex flex-col justify-between border bg-white p-4 shadow-lg">
           <div>
             <Link href={`/recipe/${item.id}`}>
               <a
@@ -64,7 +61,7 @@ export default function List({ items, SLOT_ID }) {
             responsive="false"
           />
         ) : null}
-      </>
+      </div>
     );
   });
 }

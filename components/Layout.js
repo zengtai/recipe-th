@@ -1,8 +1,28 @@
+import { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 // import { Head } from "next/head";
 
 export default function Layout({ items, children }) {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      let adsLength = document.querySelectorAll(
+        ".adsbygoogle:only-child"
+      ).length;
+      for (let i = 0; i < adsLength; i++) {
+        try {
+          (window.adsbygoogle || []).push({});
+        } catch (e) {
+          console.error(`Adsense Error: `, e);
+        }
+      }
+      // try {
+      //   (window.adsbygoogle || []).push({});
+      // } catch (e) {
+      //   console.error(`Adsense Error: `, e);
+      // }
+    }
+  }, []);
   return (
     <>
       {/* <Head>

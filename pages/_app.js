@@ -68,7 +68,7 @@ const MyApp = ({ Component, pageProps }) => {
           `,
         }}
       />
-      
+
       <Component {...pageProps} />
     </>
   );
@@ -86,7 +86,7 @@ MyApp.getInitialProps = async (appContext) => {
 
     // 提取菜谱分类名称合集
     let recipesCategoriesNames = [];
-    recipes.map((item) => recipesCategoriesNames.push(item.category));
+    recipes.forEach((item) => recipesCategoriesNames.push(item.category));
 
     // 菜谱分类名称合集去重
     recipesCategoriesNames = [...new Set(recipesCategoriesNames)];
