@@ -45,13 +45,13 @@ const Banner = ({
         data-full-width-responsive={responsive}
         data-adtest="on"
       />
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
            (adsbygoogle = window.adsbygoogle || []).push({});
        `,
         }}
-      />
+      /> */}
     </div>
   );
 };
