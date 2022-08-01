@@ -24,13 +24,14 @@ const Banner = ({
       //   }
       // }
       try {
+        console.log(`Try push`, window.adsbygoogle);
         (window.adsbygoogle || []).push({});
         console.log(`Ad is pushed`);
       } catch (e) {
         console.error(`Adsense Error: `, e);
       }
     }
-  });
+  }, []);
 
   return (
     <div className={`${className} custom-ad`}>
