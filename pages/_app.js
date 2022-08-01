@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { getLocalData } from "../lib/api";
-import { GA_ID } from "../lib/constants";
+import { GA_ID, ADS_ID } from "../lib/constants";
 
 import Script from "next/script";
 
@@ -67,6 +67,14 @@ const MyApp = ({ Component, pageProps }) => {
             });
           `,
         }}
+      />
+      <Script
+        id="adsense-init"
+        onError={ (e) => { console.error('Script failed to load', e) }}
+        async
+        strategy="afterInteractive"
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+        crossOrigin="anonymous"
       />
       <Component {...pageProps} />
     </>

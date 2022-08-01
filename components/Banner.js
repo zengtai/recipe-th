@@ -12,21 +12,21 @@ const Banner = ({
   layoutKey,
   auto,
 }) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      let adsLength = document.querySelectorAll(".adsbygoogle:only-child").length;
-        for (let i = 0; i < adsLength; i++ ) {
-          try {
-            (window.adsbygoogle || []).push({});
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     let adsLength = document.querySelectorAll(".adsbygoogle:only-child").length;
+  //       for (let i = 0; i < adsLength; i++ ) {
+  //         try {
+  //           (window.adsbygoogle || []).push({});
             
-          } catch (e) {
-            console.error(`Adsense Error: `, e.messenge);
-        }
-      }
-      alert(`OK`);
-    }
+  //         } catch (e) {
+  //           console.error(`Adsense Error: `, e.messenge);
+  //       }
+  //     }
+  //     // alert(`OK`);
+  //   }
     
-  }, []);
+  // }, []);
 
   return auto ? ( 
     <div className={`${className} custom-ad`}>
@@ -40,6 +40,9 @@ const Banner = ({
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
       />
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});    
+      </script>
     </div>
   ) : (
     <div className={`${className} custom-ad`}>
@@ -53,6 +56,10 @@ const Banner = ({
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
       />
+      <script dangerouslySetInnerHTML={{__html:`
+          (adsbygoogle = window.adsbygoogle || []).push({});    
+      `}} />
+    
     </div>
   );
 };
