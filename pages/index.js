@@ -7,7 +7,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 
 export default function Home({ data, global }) {
-  let recipes = data.recipes;
+  let recipes = data.recipes.slice(0, 20);
 
   return (
     <>
@@ -67,7 +67,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       data: {
-        recipes.slice(0,20),
+        recipes,
       },
     },
   };
