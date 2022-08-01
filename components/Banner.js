@@ -40,9 +40,9 @@ const Banner = ({
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
       />
-      <script>
+      <script dangerouslySetInnerHTML={{__html:`
           (adsbygoogle = window.adsbygoogle || []).push({});    
-      </script>
+      `}} />
     </div>
   ) : (
     <div className={`${className} custom-ad`}>
