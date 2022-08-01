@@ -30,7 +30,7 @@ const Banner = ({
         console.error(`Adsense Error: `, e);
       }
     }
-  }, []);
+  });
 
   return (
     <div className={`${className} custom-ad`}>
