@@ -25,13 +25,13 @@ const Banner = ({
       // }
       try {
         console.log(`Try push`, window.adsbygoogle);
-        setTimeout((window.adsbygoogle || []).push({}), 1000);
+        setTimeout(() => (window.adsbygoogle || []).push({}), 1000);
         console.log(`Ad is pushed`);
       } catch (e) {
         console.error(`Adsense Error: `, e);
       }
     }
-  }, [window.adsbygoogle]);
+  }, []);
 
   return (
     <div className={`${className} custom-ad`}>
