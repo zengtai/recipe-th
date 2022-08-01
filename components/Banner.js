@@ -18,11 +18,14 @@ const Banner = ({
         for (let i = 0; i < adsLength; i++ ) {
           try {
             (window.adsbygoogle || []).push({});
+            
           } catch (e) {
             console.error(`Adsense Error: `, e.messenge);
         }
       }
+      alert(`OK`);
     }
+    
   }, []);
 
   return auto ? ( 
