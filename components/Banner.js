@@ -21,7 +21,7 @@ const Banner = ({
     }
   }, []);
 
-  return auto ? (
+  return auto ? ( 
     <div className={`${className} custom-ad`}>
       <ins
         className={`adsbygoogle`}
