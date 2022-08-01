@@ -12,28 +12,7 @@ const Banner = ({
   layoutKey,
   auto,
 }) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // let adsLength = document.querySelectorAll(".adsbygoogle:only-child").length;
-      // for (let i = 0; i < adsLength; i++ ) {
-      //   try {
-      //     (window.adsbygoogle || []).push({});
-          
-      //   } catch (e) {
-      //     console.error(`Adsense Error: `, e);
-      //   }
-      // }
-      try {
-        (window.adsbygoogle || []).push({});
-        
-      } catch (e) {
-        console.error(`Adsense Error: `, e);
-      }
-    }
-    
-  }, []);
-
-  return auto ? ( 
+  return auto ? (
     <div className={`${className} custom-ad`}>
       <ins
         className="adsbygoogle"
@@ -66,7 +45,6 @@ const Banner = ({
       {/* <script dangerouslySetInnerHTML={{__html:`
           (adsbygoogle = window.adsbygoogle || []).push({});    
       `}} /> */}
-    
     </div>
   );
 };
