@@ -32,10 +32,10 @@ const Banner = ({
         console.error(`Adsense Error: `, e);
       }
     }
-  }, []);
+  }, [client]);
 
   return (
-    <div className={`${className} custom-ad`}>
+    <div className={`${className} custom-ad`} key={currentPath}>
       <ins
         className="adsbygoogle"
         style={style}
