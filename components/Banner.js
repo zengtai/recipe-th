@@ -30,7 +30,7 @@ const Banner = ({
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
-        data-adtest="on"
+        // data-adtest="on"
       />
       {/* <script
         dangerouslySetInnerHTML={{

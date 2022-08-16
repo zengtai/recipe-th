@@ -21,7 +21,7 @@ export default function Home({ data, global }) {
             style={{ display: "block" }}
             slot={ADS_SLOT_ID.home}
             responsive="true"
-            format={[`rectangle`, `horizontal`]}
+            format={`auto`}
           />
           <header className="m-4 text-center">
             <h6 className="text-sm font-medium text-orange-600">
@@ -36,7 +36,7 @@ export default function Home({ data, global }) {
             </h5>
           </header>
           <div className="grid gap-4 xl:my-8 xl:grid-cols-4 xl:gap-6">
-            <List items={recipes} type={`recipes`} SLOT_ID={ADS_SLOT_ID.feed} />
+            <List items={recipes} type={`recipes`} SLOT_ID={ADS_SLOT_ID.home} />
           </div>
         </div>
       </Layout>
