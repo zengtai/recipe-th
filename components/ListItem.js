@@ -52,10 +52,11 @@ export default function ListItem({ item, SLOT_ID }) {
       </article>
       {SLOT_ID ? (
         <Banner
-          className={`banner rectangle`}
+          className={`test`}
           style={{ display: "block" }}
           slot={SLOT_ID}
-          responsive="false"
+          layout="fluid"
+          layoutKey={`-5b+bt-55-75+1gf`}
         />
       ) : null}
     </>
